@@ -25,7 +25,7 @@ public class SingleSystemTest {
 
 
 	}
-
+	//Simple case. Select Dory and do not change the vote
 	@Test public void t0(){
 		WebElement we = wd.findElement(By.id("btn_continue_not_admin"));
 		we.click();
@@ -87,6 +87,7 @@ public class SingleSystemTest {
 		assertEquals("Dory", wd.findElement(By.id("candidate_entry")).getText());
 	}
 
+	//second case, select Nemo and do not change the vote. 
 	@Test public void t1(){
 		wd.get(web_address);
 		WebElement we;
@@ -150,7 +151,7 @@ public class SingleSystemTest {
 
 	@AfterClass
 	public static void oneTimeTearDown() {
-		//wd.close();
+		wd.close();
 	}
 
 }
