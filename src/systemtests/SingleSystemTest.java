@@ -21,9 +21,6 @@ public class SingleSystemTest {
 	public static void oneTimeSetup() {
 		wd = new FirefoxDriver();
 		wd.get(web_address);
-
-
-
 	}
 	//Simple case. Select Dory and do not change the vote
 	@Test public void t0(){
